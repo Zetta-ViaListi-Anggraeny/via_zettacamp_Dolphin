@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>form basics</h1>
+		<form onsubmit="alert('Form is Being Submitted');">
+			<input
+				type="Text"
+				placeholder="Input Text"
+				id="text"
+			/>
+			<input
+				type="submit"
+				value="Submit"
+			/>
+			<!-- <input type="button" value="Submit"/> -->
+		</form>
+
+		<h1>Intermediate Form</h1>
+		<form action="">
+			<textarea
+				name=""
+				id=""
+				cols="30"
+				rows="10"
+			></textarea>
+			<br />
+			<select
+				name=""
+				id=""
+			>
+				<option value="">Cheddar Cheese</option>
+				<option value="">Cheese</option>
+				<option value="">Mozzarela</option>
+			</select>
+			<br />
+			<input
+				type="radio"
+				name="radio"
+				id="cheddar"
+			/>
+			<label for="cheddar">Cheddar Cheese</label>
+			<br />
+			<input
+				type="radio"
+				name="radio"
+				id="cheese"
+			/>
+			<label for="cheese">Cheese</label>
+			<br />
+			<input
+				type="radio"
+				name="radio"
+				id="mozza"
+			/>
+			<label for="mozza">Mozzarela</label>
+			<br />
+            <input type="submit" value="submit">
+		</form>
+	</body>
+</html>
