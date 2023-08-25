@@ -67,11 +67,11 @@ function showBookPurchasing(title, price, discount, tax, stock, purchased) {
 	console.log('Total Harga Pembelian :', totalPrice);
 	console.log('Harga Setelah Diskon :', afterDiscount(totalPrice, discount));
 	console.log('Harga Setelah Pajak :', afterTax(afterDiscount(totalPrice,discount), tax));
-	console.log('Ketersedian Buku :', isAvailable >= 0 ? 'Available' : 'Out Of Stock');
+	console.log('Ketersedian Buku :', isAvailable > 0 ? 'Available' : 'Out Of Stock');
 	console.log('Sisa Buku :', isAvailable);
 	console.log(isAvailable > 0 ? 'Dapat Membeli Buku Lagi.' : 'Tidak Dapat Membeli Buku Lagi.');
 }
 
 
 console.log('==== Book List ====');
-showBookPurchasing(bookList[0].title, bookList[0].price, 40, 10, bookList[0].stock, 19);
+showBookPurchasing(bookList[0].title, bookList[0].price, 40, 10, 0, 0);
