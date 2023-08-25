@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	color: #191c1f;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-between;
+}
+
+.my-1 {
+	margin: 1rem 0;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.p-2 {
+	padding: 2rem;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+/* Seperated Styling */
+.title {
+	font-weight: 700;
+	font-size: 54px;
+}
+
+.small-text {
+	letter-spacing: -0.18px;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+header {
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 2;
+
+	border-bottom: #bcbcbc 1px solid;
+}
+
+.grid:nth-of-type(1){
+	margin-top: 100px;
+}
+
+.logo {
+	font-size: 34px;
+}
+
+.price {
+	letter-spacing: -0.18px;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.card {
+	width: 322px;
+	height: auto;
+}
+
+.card-img img {
+	object-fit: cover;
+	width: 322px;
+	height: 432px;
+	background-color: #f5f5f5;
+}
+
+.card-img .img-action {
+	position: relative;
+	top: 432px;
+	bottom: 0;
+
+	background-color: #191c1f;
+	height: 60px;
+	width: 322px;
+	/* visibility: hidden; */
+	opacity: 0;
+	transition: 0.3s;
+	z-index: 1;
+}
+
+.card-img:hover .img-action {
+	/* visibility: visible; */
+	opacity: 1;
+}
+
+.card-img:hover img {
+	/* visibility: visible; */
+	background: rgb(0, 0, 0 ,0.5);
+}
+
+.img-action > p {
+	color: white;
+	padding: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.card-body{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px 0;
+}
+
+.card-body p:first-child{
+	width: 70%;
+}
+
+.card-body p:last-child{
+	width: 30%;
+	font-size: 28px;
+}
+
+footer {
+	padding: 26px 150px;
+	background-color: #191c1f;
+	color: white;
+
+	margin-top: 3rem;
+}
+
+footer span {
+	color: white;
+	font-weight: 700;
+}
+
+
