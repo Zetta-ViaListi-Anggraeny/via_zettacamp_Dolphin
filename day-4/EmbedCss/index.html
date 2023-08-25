@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- font -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Multiple Table</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				font-family: 'Poppins', sans-serif;
+				color: #282624;
+			}
+
+			.m-screen {
+				padding: 0 400px;
+			}
+            
+            header {
+                width: 100%;
+                display: flex;
+                align-items: end;
+                column-gap: 40px;
+
+                margin: 80px 0;
+            }
+
+            header .title{
+                width: 60%;
+            }
+
+			header img {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+
+            table>caption{
+                padding: 10px 0px;
+                font-weight: 600;
+            }
+
+            table, tr, td,th{
+                border: #282624 1px solid;
+                padding: 5px;
+            }
+
+            table:first-of-type tr:first-child {
+                background-color: darkseagreen;
+            }
+
+            table:nth-of-type(2) tr:nth-child(2n) {
+                background-color: indianred;
+            }
+
+            table:nth-of-type(3) tr:nth-child(3) {
+                background-color:  cadetblue;
+            }
+
+            footer{
+                margin: 40px 0;
+				font-weight: 700;
+            }
+
+			footer span{
+				color: darkred;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header class="m-screen">
+			<img
+				src="assets/giphy.webp"
+				alt=""
+			/>
+			<div class="title">
+				<h1>My Interests</h1>
+				<p>Explore my hobbies, favorite movies, and beloved songs in the tables below:</p>
+			</div>
+		</header>
+		<main class="m-screen">
+			<section>
+                <!-- Tabel 1 -->
+				<table>
+					<caption>
+						My Hobbies
+					</caption>
+					<tr>
+						<th>Hobby</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>Hiking</td>
+						<td>Exploring nature's beauty and staying active.</td>
+					</tr>
+					<tr>
+						<td>Listening Music</td>
+						<td>Enjoying melodies and rhythms from different genres.</td>
+					</tr>
+					<tr>
+						<td>Watching Movies</td>
+						<td>Immerse in captivating stories and cinematic experiences.</td>
+					</tr>
+				</table>
+                <!-- Tabel 2 -->
+                <table>
+					<caption>
+						Favorite Movies
+					</caption>
+					<tr>
+						<th>Movie</th>
+						<th>Director</th>
+                        <th>Year</th>
+					</tr>
+					<tr>
+						<td>The Shawshank Redemption</td>
+						<td>Frank Darabont</td>
+                        <td>1994</td>
+					</tr>
+                    <tr>
+						<td>Inception</td>
+						<td>Christopher Nolan</td>
+                        <td>2010</td>
+					</tr>
+                    <tr>
+						<td>Spirited Away</td>
+						<td>Hayao Miyazaki</td>
+                        <td>2001</td>
+					</tr>
+                    <tr>
+						<td>Pulp Fiction</td>
+						<td>Quentin Tarantino</td>
+                        <td>1994</td>
+					</tr>
+				</table>
+                <!-- Tabel 3 -->
+                <table>
+					<caption>
+						Favorite Songs
+					</caption>
+					<tr>
+						<th>Song</th>
+						<th>Artist</th>
+                        <th>Year</th>
+					</tr>
+					<tr>
+						<td>Bohemian Rhapsody</td>
+						<td>Queen</td>
+                        <td>1975</td>
+					</tr>
+                    <tr>
+						<td>Rolling in the Deep</td>
+						<td>Adele</td>
+                        <td>2010</td>
+					</tr>
+                    <tr>
+						<td>Hotel California</td>
+						<td>Eagles</td>
+                        <td>1977</td>
+					</tr>
+                    <tr>
+						<td>Imagine</td>
+						<td>John Lennon</td>
+                        <td>1971</td>
+					</tr>
+				</table>
+			</section>
+		</main>
+
+        <footer class="m-screen">
+			<p>Multiple Tables  | <span>&copy; Via</span></p>
+		</footer>
+	</body>
+</html>
+
+<!-- Create UI for Multiple Tables. Table Hobby, Table Favorites Movies, And Table Favorites Song. The First row of the First Table has Green Background, the second row of Second table has Red background, and the third row of Third table has a blue background. -->
