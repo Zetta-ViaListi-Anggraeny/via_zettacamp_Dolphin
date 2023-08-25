@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Register</title>
+		<link
+			rel="stylesheet"
+			href="register.css"
+		/>
+	</head>
+	<body>
+		<div
+			class="card"
+			style="background-color: #fff"
+		>
+			<h1 class="primary-color">Welcome to ServiceToGo</h1>
+			<h4>Let's begin by collecting some basic information to get to know you better. Please fill in the following details</h4>
+			<form action="profile.html">
+				<div class="name">
+					<label for="name">Name</label><br />
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Firstname"
+						class="input"
+						required
+					/>
+					<input
+						type="text"
+						name="name"
+						id=""
+						placeholder="Lastname"
+						style="margin-left: 17px"
+						required
+					/>
+				</div>
+
+				<p>Type Of account</p>
+				<input
+					type="radio"
+					name="type"
+					id="free"
+					required
+				/>
+				<label for="free">Free</label>
+				<input
+					type="radio"
+					name="type"
+					id="personal"
+					required
+				/>
+				<label for="personal">Personal</label>
+
+				<h2 class="sub-head primary-color">Contact Details</h2>
+				<p style="margin-bottom: 20px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus magni vitae voluptates error!</p>
+				<div class="contact">
+					<span>
+						<label for="email">Email</label><br />
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Input your email"
+							required
+						/>
+					</span>
+					<span>
+						<label for="password">Password </label><br />
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Input your password"
+							required
+						/>
+					</span>
+				</div>
+
+				<span>
+					<label for="phone">Phone Number</label><br />
+					<input
+						type="tel"
+						name="phone"
+						id="phone"
+						placeholder="Input your phone number"
+						required
+					/>
+				</span><br>
+
+				<input
+					type="submit"
+					value="Submit"
+				/>
+			</form>
+		</div>
+	</body>
+</html>
