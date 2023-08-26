@@ -11,15 +11,24 @@ console.log(hasUniqueCharacters("hello")); // Output: false
 
 function hasUniqueCharacters(str) {
 	// Your logic here
-	let unik = str.split('');
-	unik.sort();
-	for (let i = 0; i < unik.length; i++) {
-		if (unik[i] == unik[i + 1]) {
-			return false;
+	// let unik = str.split('');
+	// unik.sort();
+	// for (let i = 0; i < unik.length; i++) {
+	// 	if (unik[i] == unik[i + 1]) {
+	// 		return false;
+	// 	}
+	// }
+	for (let i = 0; i < str.length; i++) {
+		for (let y = i + 1; y < str.length; y++) {
+			// console.log(str[i], str[y]);
+			if (str[i] == str[y]) {
+				return false;
+			}
 		}
 	}
 	return true;
 }
 
-console.log(hasUniqueCharacters('abacdefg')); // Output: true
+// hasUniqueCharacters('abc');
+console.log(hasUniqueCharacters('abcdefgh')); // Output: true
 console.log(hasUniqueCharacters('hello')); // Output: false
