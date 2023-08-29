@@ -1,6 +1,19 @@
 /*
-Update your book purchasing function to add parameter for the total duration of credit (indicating the credit term length in months) and calculate the due date for each month Starting from the next month when you work on this code using array function in javascript and display the results as an array of strings.
+Based on the due date that was generated on JS Day 5, update the function to calculate the amount of payment for each month using array function. Then display the data as an array of objects that have values due date of payment and amount of payment, be careful the total amount of payment must be the same as total price of books purchased.
+
+* Today's assessment score:
+* Understand and create function with object in JavaScript
+- Calculate the amount of payment for each month - Ok
+- Display the result as array of object - Ok
+* Implementation conditional statement and array function
+- Calculate term using array function - Ok
+- Total amount of payment must be the same as total price of books purchased - Ok
+* Completing the logic test
+- Result for the logic test as expected -> able to define majority data in array
+- Explain line by line of code on the logic test
+- Define majority data value that specified (Number Based on Logic Test or from Mentor)
 */
+
 const bookList = [
 	{
 		title: 'Harry Potter and the Cursed Child',
@@ -41,12 +54,10 @@ const bookStock = (stock, purchased) => {
 };
 
 const termCredit = (totalDurationCredit, price) => {
-	let bunga = (2 / 100) * price;
-	// let payment = (bunga + price) / totalDurationCredit;
-	let payment = Math.round((bunga + price) / totalDurationCredit);
 	let jangkaPeminjaman = 30;
 	let paymentDetails = [];
-	let dueDateArr = [];
+	// Calculate the amount of payment for each month
+	let payment = Math.round(price / totalDurationCredit);
 
 	const currentDate = new Date();
 
@@ -56,16 +67,16 @@ const termCredit = (totalDurationCredit, price) => {
 		const dueDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + jangkaPeminjaman * i);
 		//Mengubah format Date nya
 		const dueDateFormat = dueDate.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+		// Hitung jumlah pembayaran tiap bulan - ArrayObject
 		paymentDetails.push({ term, payment, dueDateFormat });
-		dueDateArr.push(dueDateFormat);
 	}
-	return dueDateArr;
-	// return paymentDetails;
+	return paymentDetails;
 };
 
 function bookPurchasing(purchased, discount, tax, totalPrice, isAvailable, totalDurationCredit = 0) {
 	let priceAfterTax = afterTax(afterDiscount(totalPrice, discount), tax);
 	const credit = termCredit(totalDurationCredit, totalPrice, discount);
+	let totalPaymentCredit = 0;
 
 	console.log('Jumlah Buku yang dibeli :', purchased);
 	console.log('Diskon :', discount, '%');
@@ -80,20 +91,16 @@ function bookPurchasing(purchased, discount, tax, totalPrice, isAvailable, total
 	//Credit
 	if (totalDurationCredit !== 0) {
 		console.log('Credit Duration :', totalDurationCredit);
-		//Pake Map untuk menampilkan data array dari Paymentdetails
-		// credit.map((value) => {
-		// 	totalPaymentCredit = value.payment * totalDurationCredit;
-		// 	console.log('>> Term :', value.term, '|| Payment : Rp', value.payment, '|| Due Date :', value.dueDateFormat);
-		// });
-		// credit.map((value, index) => console.log('Term :', index + 1, '|| Due Date :', value));
-		for (let i = 0 ; i < totalDurationCredit; i++){
-			console.log(credit[i]);
-		}
+		// Display the result as array of object
 		console.log(credit);
+		//Calculate term using array function
+		credit.forEach((total) => {
+			totalPaymentCredit += total.payment;
+		});
 		//
-		// console.log('Total Credit Payment + Bunga 2% : Rp', totalPaymentCredit);
+		console.log('Total Credit Payment (', totalDurationCredit, 'Month ): Rp', totalPaymentCredit);
 		console.log('===================================');
-		// console.log('Total Yang Dibayarkan Rp.', totalPaymentCredit);
+		console.log('Total Yang Dibayarkan Rp.', totalPaymentCredit);
 	} else {
 		console.log('Total Yang Dibayarkan Rp.', priceAfterTax);
 	}
@@ -120,5 +127,5 @@ function showBookPurchasing(title, price, discount, tax, stock, purchased, total
 }
 
 console.log('==== Book List ====');
-// showBookPurchasing(title, price, discount,tax, stock, purchased, creditduration:0)
-showBookPurchasing(bookList[0].title, bookList[0].price, 40, 10, 10, 5, 3);
+// Input Guide : title, price, discount,tax, stock, purchased, creditduration
+showBookPurchasing(bookList[0].title, bookList[0].price, 40, 10, 10, 3, 3);
