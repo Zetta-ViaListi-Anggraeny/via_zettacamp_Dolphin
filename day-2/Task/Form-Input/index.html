@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Form Input</title>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+	</head>
+	<body>
+		<div
+			class="card"
+			style="background-color: #fff"
+		>
+			<h1 class="primary-color">Welcome to Personal Data Input</h1>
+			<h4>Let's begin by collecting some basic information to get to know you better. Please fill in the following details</h4>
+			<form action="">
+				<div class="name">
+					<label for="name">Name</label><br />
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Firstname"
+						class="input"
+					/>
+					<input
+						type="text"
+						name="name"
+						id=""
+						placeholder="Lastname"
+						style="margin-left: 17px"
+					/>
+				</div>
+				<div class="contact">
+					<span>
+						<label for="date">Date of Birth</label><br />
+						<input
+							type="date"
+							name=""
+							id="date"
+						/>
+					</span>
+					<span class="ms">
+						<label for="age">Age</label><br />
+						<input
+							type="number"
+							name=""
+							id="age"
+							placeholder="Input your number"
+						/>
+					</span>
+				</div>
+
+				<p>Gender</p>
+				<input
+					type="radio"
+					name="Gender"
+					id="male"
+				/>
+				<label for="male">Male</label>
+				<input
+					type="radio"
+					name="Gender"
+					id="female"
+				/>
+				<label for="female">Female</label>
+
+				<h2 class="sub-head primary-color">Contact Details</h2>
+				<p style="margin-bottom: 20px">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus magni vitae voluptates error!</p>
+				<div class="contact">
+					<span>
+						<label for="email">Email</label>
+						<input
+							type="email"
+							name=""
+							id="email"
+							placeholder="Input your email"
+						/>
+					</span>
+					<span style="margin-left: 40px;">
+						<label for="phone">Phone Number</label>
+						<input
+							type="tel"
+							name=""
+							id="phone"
+							placeholder="Input your phone number"
+                            
+						/>
+					</span>
+
+					<span>
+						<label for="social">Social Media </label>
+						<input
+							type="url"
+							name=""
+							id=""
+							placeholder="Input your social media"
+						/>
+					</span>
+				</div>
+
+				<p>Tell Us More About Yourself</p>
+				<textarea
+					name=""
+					id=""
+					cols="50px"
+                    rows="50px"
+                    style="max-height: 50px; max-width: 100%;"
+					placeholder="Tell us about you here..."
+				></textarea
+				><br />
+
+				<input
+					type="submit"
+					value="Submit"
+				/>
+			</form>
+		</div>
+	</body>
+</html>
+
+<!-- Create a form for inputting users. It has to have : 
+Text Input like first name, last name.
+Textarea like biography
+Radio button for Civility or Gender
+Email input
+Telephone input
+Number input for age
+Url for their website or social media
+OPTIONAL : Add more input into the form.
+ -->
