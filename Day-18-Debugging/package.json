@@ -1,0 +1,12 @@
+{
+  "name": "day-18-debugging",
+  "version": "1.0.0",
+  "description": "learning debugging",
+  "main": "Task.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node task.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
