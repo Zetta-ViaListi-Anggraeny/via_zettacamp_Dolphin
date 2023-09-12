@@ -1,16 +1,8 @@
 function ProductToSimplifiedProduct(productInfo) {
-    // const { name, vendor, quantity, inStock, price } = productInfo;
-    // const simplifiedProduct: SimplifiedProduct = {
-    // 	name,
-    // 	buyable: inStock > 0,
-    // };
-    // if (simplifiedProduct.buyable) {
-    // 	simplifiedProduct.totalPrice = quantity * price;
-    // }
-    // return simplifiedProduct;
+    // const {name, vendor, quantity, inStock,price} = productInfo;
     var simplifiedProduct = {
         name: productInfo.name,
-        buyable: productInfo.quantity > 0,
+        buyable: productInfo.quantity > 0 && productInfo.inStock > 0,
     };
     if (simplifiedProduct.buyable) {
         simplifiedProduct.totalPrice = productInfo.quantity * productInfo.price;
@@ -20,22 +12,22 @@ function ProductToSimplifiedProduct(productInfo) {
 function stringCombination(input) {
     var result = '';
     for (var _i = 0, input_1 = input; _i < input_1.length; _i++) {
-        var checkInput = input_1[_i];
-        if (typeof checkInput === 'number') {
-            result += checkInput.toString() + ' ';
+        var checkValue = input_1[_i];
+        if (typeof checkValue === 'number') {
+            result += checkValue.toString() + ' ';
         }
         else {
-            result += checkInput + ' ';
+            result += checkValue + ' ';
         }
     }
     return result;
 }
 function sumOrCombination(input) {
-    var isNumber = input.every(function (checkArray) { return typeof checkArray === 'number'; });
-    var isString = input.every(function (checkArray) { return typeof checkArray === 'string'; });
     // console.log(isString);
     // console.log(isNumber);
     if (input.length != 0) {
+        var isNumber = input.every(function (checkArray) { return typeof checkArray === 'number'; });
+        var isString = input.every(function (checkArray) { return typeof checkArray === 'string'; });
         if (isString) {
             return input.join(' ');
         }
@@ -60,7 +52,7 @@ console.log(inputSecondArrayCombination);
 console.log('================================');
 var inputSumOrCombinationString = sumOrCombination(['the', 'dolphins', 'of', 'zettacamp']);
 var inputSumOrCombinationNumber = sumOrCombination([1, 2, 3, 4]);
-var inputSumOrCombinationInvalid = sumOrCombination([]);
+var inputSumOrCombinationInvalid = sumOrCombination([1, 'Aku']);
 console.log(inputSumOrCombinationString);
 console.log(inputSumOrCombinationNumber);
 console.log(inputSumOrCombinationInvalid);
@@ -70,7 +62,7 @@ var productInfo1 = {
     name: 'Coca Cola',
     vendor: 'Coca Cola Company',
     quantity: 5,
-    inStock: 100,
+    inStock: 0,
     price: 5000,
 };
 var simplifiedProduct1 = ProductToSimplifiedProduct(productInfo1);

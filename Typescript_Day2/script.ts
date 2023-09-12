@@ -1,4 +1,4 @@
-// type combine : string | number
+// type combine = string | number;
 type Product = {
 	name: string;
 	vendor: string;
@@ -10,23 +10,14 @@ type Product = {
 type SimplifiedProduct = {
 	name: string;
 	buyable: boolean;
-	totalPrice?: number; //optional variable
+	totalPrice?: number;
 };
 
 function ProductToSimplifiedProduct(productInfo: Product): SimplifiedProduct {
-	// const { name, vendor, quantity, inStock, price } = productInfo;
-	// const simplifiedProduct: SimplifiedProduct = {
-	// 	name,
-	// 	buyable: inStock > 0,
-	// };
-
-	// if (simplifiedProduct.buyable) {
-	// 	simplifiedProduct.totalPrice = quantity * price;
-	// }
-
+	// const {name, vendor, quantity, inStock,price} = productInfo;
 	const simplifiedProduct: SimplifiedProduct = {
 		name: productInfo.name,
-		buyable: productInfo.quantity > 0,
+		buyable: productInfo.quantity > 0 && productInfo.inStock > 0,
 	};
 
 	if (simplifiedProduct.buyable) {
@@ -38,24 +29,23 @@ function ProductToSimplifiedProduct(productInfo: Product): SimplifiedProduct {
 
 function stringCombination(input: (string | number)[]): string {
 	let result: string = '';
-	for (const checkInput of input) {
-		if (typeof checkInput === 'number') {
-			result += checkInput.toString() + ' ';
+	for (const checkValue of input) {
+		if (typeof checkValue === 'number') {
+			result += checkValue.toString() + ' ';
 		} else {
-			result += checkInput + ' ';
+			result += checkValue + ' ';
 		}
 	}
 	return result;
 }
 
 function sumOrCombination(input: (string | number)[]): string | number {
-	let isNumber = input.every((checkArray) => typeof checkArray === 'number');
-	let isString = input.every((checkArray) => typeof checkArray === 'string');
-
 	// console.log(isString);
 	// console.log(isNumber);
 
 	if (input.length != 0) {
+		let isNumber = input.every((checkArray) => typeof checkArray === 'number');
+		let isString = input.every((checkArray) => typeof checkArray === 'string');
 		if (isString) {
 			return input.join(' ');
 		} else if (isNumber) {
@@ -83,7 +73,7 @@ console.log('================================');
 
 const inputSumOrCombinationString = sumOrCombination(['the', 'dolphins', 'of', 'zettacamp']);
 const inputSumOrCombinationNumber = sumOrCombination([1, 2, 3, 4]);
-const inputSumOrCombinationInvalid = sumOrCombination([]);
+const inputSumOrCombinationInvalid = sumOrCombination([1, 'Aku']);
 console.log(inputSumOrCombinationString);
 console.log(inputSumOrCombinationNumber);
 console.log(inputSumOrCombinationInvalid);
@@ -95,7 +85,7 @@ const productInfo1: Product = {
 	name: 'Coca Cola',
 	vendor: 'Coca Cola Company',
 	quantity: 5,
-	inStock: 100,
+	inStock: 0,
 	price: 5000,
 };
 
