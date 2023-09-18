@@ -1,0 +1,28 @@
+<!-- card/travel-card.component.html -->
+<div class="container card-list" style="margin-top: 40px">
+  <mat-card
+    class="card"
+    *ngFor="let data of travelData; let i = index"
+    style="margin-top: 20px"
+  >
+    <mat-card-content>
+      <img [src]="data.imageUrl" alt="{{ data.name }}" />
+      <h2>{{ data.name }}</h2>
+      <div class="flex">
+        <p class="flex-loc">
+          <embed src="../../../assets/loc.svg" type="" />{{ data.location }}
+        </p>
+
+        <div class="flex">
+          <button style="background-color: #f44336;" (click)="deleteItem(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <!-- <button style="background-color: #7784ee; padding: 10px 10px;">
+            See Details
+          </button> -->
+        </div>
+      </div>
+      <!-- <p>{{ data.description }}</p> -->
+    </mat-card-content>
+  </mat-card>
+</div>
