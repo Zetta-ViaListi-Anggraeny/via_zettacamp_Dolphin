@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	color: #191c1f;
+}
+
+.container {
+	width: 80vw;
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+
+	row-gap: 40px;
+}
+
+.my-1 {
+	margin: 1rem 0;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.p-2 {
+	padding: 2rem;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+/* Seperated Styling */
+header {
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 2;
+
+	border-bottom: #bcbcbc 1px solid;
+}
+
+.flex:first-of-type {
+	margin-top: 150px;
+}
+
+.logo {
+	font-size: 2.125rem;
+}
+
+.card {
+	width: 322px;
+	height: auto;
+
+}
+
+.card-img img {
+	object-fit: cover;
+	width: 322px;
+	height: 432px;
+	background-color: #f5f5f5;
+}
+
+.card-img .img-action {
+	position: absolute;
+	visibility: collapse;
+	z-index: 1;
+}
+
+.background-hover {
+	position: relative;
+	background: black;
+	opacity: 30%;
+	height: 432px;
+	width: 322px;
+}
+
+.img-action > a {
+	color: white;
+	padding: 20px 0;
+	font-weight: 600;
+
+	font-size: 1.25rem;
+	text-align: center;
+	position: absolute;
+	top: 375px;
+	background-color: #010101;
+	height: 60px;
+	width: 322px;
+
+	text-decoration: none;
+
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 300ms linear;
+}
+
+.card-img:hover .img-action > a {
+	visibility: visible;
+	transform: scaleY(1);
+	transform-origin: bottom;
+}
+
+.card-img:hover .img-action > .background-hover {
+	visibility: visible;
+	/* transition: 600ms ease-in; */
+}
+
+.card-body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.625rem;
+}
+
+.card-body p:first-child {
+	width: 65%;
+	font-size: 1rem;
+}
+
+.card-body p:last-child {
+	font-size: 1.75rem;
+	letter-spacing: -0.18px;
+	font-weight: 700;
+}
+
+footer {
+	padding: 20px;
+	background-color: #191c1f;
+
+	margin-top: 3rem;
+}
+
+footer > p {
+	color: white;
+}
+
+footer span {
+	color: white;
+	font-weight: 700;
+}
