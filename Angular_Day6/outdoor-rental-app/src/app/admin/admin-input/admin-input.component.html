@@ -1,0 +1,71 @@
+<div
+  class=" px-14 py-5 w-screen bg-white"
+  *ngIf="rentalService.showForm"
+>
+  <form (ngSubmit)="submitForm()" class="flex flex-col">
+    <label for="imageUrl" class="input-text">Image URL</label>
+    <input
+      id="imageUrl"
+      name="imageUrl"
+      [(ngModel)]="rentalData.imageUrl"
+      placeholder="Input Link Image"
+      class="input"
+    />
+
+    <label for="name" class="input-text">Name Product</label>
+    <input
+      id="name"
+      name="name"
+      [(ngModel)]="rentalData.name"
+      placeholder="Input Name Product"
+      class="input"
+    />
+
+    <label for="description" class="input-text">Description</label>
+    <input
+      id="description"
+      name="description"
+      type="text"
+      [(ngModel)]="rentalData.description"
+      placeholder="Input Description here..."
+      class="input"
+    />
+
+    <label for="type" class="input-text">Type</label>
+    <input
+      id="type"
+      name="type"
+      type="text"
+      [(ngModel)]="rentalData.type"
+      placeholder="Input Type of the Product"
+      class="input"
+    />
+
+    <label for="price" class="input-text">Price</label>
+    <input
+      id="price"
+      name="price"
+      type="number"
+      [(ngModel)]="rentalData.price"
+      placeholder="Input Price"
+      class="input"
+    />
+
+    <label for="stock" class="input-text">Stock</label>
+    <input
+      id="stock"
+      name="stock"
+      type="number"
+      [(ngModel)]="rentalData.stock"
+      placeholder="Input Stock"
+      class="input"
+    />
+
+    <button
+      type="submit"
+      class="mt-5 btn-primary py-2 rounded-md font-semibold text-white"
+    >
+      Submit
+    </button>
+  </form>
+</div>
