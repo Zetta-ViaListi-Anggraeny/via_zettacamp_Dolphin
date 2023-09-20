@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class RentalService {
   rentalData = [
     {
+      id: 1,
       name: 'Camping Tent',
       description: 'Enjoy the great outdoors with our spacious camping tents.',
       price: 40000,
@@ -16,6 +17,7 @@ export class RentalService {
       imageUrl: '../../assets/1.jpg',
     },
     {
+      id: 2,
       name: 'Tracking Pole',
       description: 'Perfect for tracking through various terrains, our pool shoes keep your feet dry and comfortable.',
       price: 10000,
@@ -25,6 +27,7 @@ export class RentalService {
       imageUrl: '../../assets/2.jpg',
     },
     {
+      id: 3,
       name: 'Hiking Shoes',
       description: 'Perfect for tracking through various terrains, our pool shoes keep your feet dry and comfortable.',
       price: 20000,
@@ -34,6 +37,7 @@ export class RentalService {
       imageUrl: '../../assets/3.jpg',
     },
     {
+      id: 4,
       name: 'Mountain Chalet',
       description: 'Escape to the mountains in our cozy chalet.',
       price: 60000,
@@ -50,7 +54,6 @@ export class RentalService {
   selectedRentalData = new BehaviorSubject<any[] | null>(null);
   selectedData$ = this.selectedRentalData.asObservable();
 
-  showForm: boolean = false;
 
   constructor() {}
 
@@ -77,7 +80,9 @@ export class RentalService {
     this.selectedRentalData.next(null);
   }
 
-  toggleFormVisibility() {
-    this.showForm = !this.showForm; // Toggle form visibility when called
+  getRentalById(id: number): any | null {
+    const rentals = this.rentalData;
+    const rental = rentals.find((item) => item.id === id);
+    return rental || null;
   }
 }

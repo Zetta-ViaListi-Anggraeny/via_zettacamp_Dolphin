@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RentalService } from 'src/app/shared/rental.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { RentalService } from 'src/app/shared/rental.service';
 export class RentalListComponent implements OnInit {
   rentalData: any[] = [];
 
-  constructor(public rentalService: RentalService) {}
+  constructor(public rentalService: RentalService, private router: Router) {}
 
   ngOnInit(): void {
     this.rentalService.rentalData$.subscribe((data) => {
@@ -25,6 +26,7 @@ export class RentalListComponent implements OnInit {
 
   seeDetail(index: number): void {
     const selectedRental = this.rentalData[index];
-    this.rentalService.detailRentalData(selectedRental);
+    // this.rentalService.detailRentalData(selectedRental);
+    this.router.navigate(['rental/item-detail',selectedRental.id]);
   }
 }

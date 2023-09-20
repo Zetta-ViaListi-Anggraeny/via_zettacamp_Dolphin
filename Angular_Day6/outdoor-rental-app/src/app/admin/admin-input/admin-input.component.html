@@ -1,6 +1,5 @@
 <div
-  class=" px-14 py-5 w-screen bg-white"
-  *ngIf="rentalService.showForm"
+  class=" px-14 py-5"
 >
   <form (ngSubmit)="submitForm()" class="flex flex-col">
     <label for="imageUrl" class="input-text">Image URL</label>
@@ -25,7 +24,6 @@
     <input
       id="description"
       name="description"
-      type="text"
       [(ngModel)]="rentalData.description"
       placeholder="Input Description here..."
       class="input"

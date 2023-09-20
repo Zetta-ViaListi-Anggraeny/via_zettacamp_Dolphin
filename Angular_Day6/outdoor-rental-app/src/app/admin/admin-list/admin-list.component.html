@@ -1,0 +1,16 @@
+<div class="lg:flex lg:px-14">
+  <div class="lg:w-1/2 bg-white h-[700px] rounded-md m-5">
+    <app-admin-input></app-admin-input>
+  </div>
+  <div class="lg:w-1/2 lg:px-0 lg:pb-5 max-sm:px-14">
+    <h2 class="pt-5 text-white font-bold text-2xl">Data List</h2>
+    <div class="lg:overflow-scroll lg:h-screen lg:p-5">
+      <div *ngFor="let data of rentalData; let i = index">
+        <app-admin-item
+          (deleteData)="onDeleteData(i)"
+          [rentalDataItem]="data"
+        ></app-admin-item>
+      </div>
+    </div>
+  </div>
+</div>

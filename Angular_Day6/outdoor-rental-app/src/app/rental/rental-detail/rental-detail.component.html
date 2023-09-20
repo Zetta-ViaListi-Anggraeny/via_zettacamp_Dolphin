@@ -1,26 +1,25 @@
-<div
-  *ngIf="selectedData"
-  class="fixed inset-0 flex items-center lg:ms-96 justify-center z-50 lg:w-1/2"
->
-  <div class="fixed inset-0 bg-gray-900 opacity-70"></div>
-  <div class="bg-white p-8 rounded-lg z-10">
-    <div>
-      <h2 class="text-xl font-semibold mb-4">Rental Details</h2>
-    </div>
-    <div>
-      <img
-        [src]="selectedData.imageUrl"
-        alt=""
-        class="w-screen h-60 object-cover rounded-lg"
-      />
-      <div class="py-5 flex flex-col gap-2">
+<div class="lg:px-14">
+  <div class="bg-white p-5 lg:rounded-md">
+    <div class="flex flex-col lg:flex-row lg:gap-x-8 lg:items-center">
+      <div class="lg:w-1/2">
+        <img
+          [src]="selectedData.imageUrl"
+          alt=""
+          class="w-screen h-96 object-cover rounded-md"
+        />
+      </div>
+      <div class="py-5 flex flex-col gap-2 lg:w-1/2">
         <p class="text-xl font-bold">{{ selectedData.name }}</p>
         <p class="">{{ selectedData.description }}</p>
-        <p>Price : {{ selectedData.price }}</p>
+        <p>
+          Price : Rp.
+          <span class="font-semibold text-lg">{{ selectedData.price }}</span
+          ><b class="text-sm"> /Days</b>
+        </p>
         <p>Stock : {{ selectedData.stock }}</p>
         <p>Type : {{ selectedData.type }}</p>
         <p
-          class="0 w-24 text-center py-1 font-semibold text-sm rounded-full"
+          class="w-24 text-center py-1 font-semibold text-sm rounded-full"
           [ngClass]="
             selectedData.isAvailable
               ? 'text-green-900 bg-green-200'
@@ -29,15 +28,18 @@
         >
           {{ selectedData.isAvailable ? "Available" : "UnAvailable" }}
         </p>
+
+        <!-- <p class="font-semibold">Qty</p>
+        <div class="flex items-center justify-between gap-x-5 lg:w-1/2">
+          <button class="font-semibold text-xl rounded-md w-24 py-1 bg-emerald-900 text-white">
+            -
+          </button>
+          <input type="number" class="border-gray-300 border py-1 px-2 rounded-md"/>
+          <button class=" font-semibold text-xl rounded-md w-24 py-1 bg-emerald-900 text-white">
+            +
+          </button>
+        </div> -->
       </div>
     </div>
-
-    <!-- Close button -->
-    <button
-      (click)="rentalService.resetSelectedData()"
-      class="mt-4 bg-red-600 text-white py-2 px-5 rounded-md"
-    >
-      Close
-    </button>
   </div>
 </div>

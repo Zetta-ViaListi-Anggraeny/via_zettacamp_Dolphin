@@ -7,9 +7,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class RentalItemComponent {
   @Input() rentalDataItem : any;
-  @Output() seeDetail = new EventEmitter<any>();
+  @Output() seeDetail = new EventEmitter<number>();
 
   onSeeDetail(){
-    this.seeDetail.emit(this.rentalDataItem)
+    this.seeDetail.emit(this.rentalDataItem.id)
   }
 }
