@@ -1,0 +1,10 @@
+<div class="container px-16 grid lg:grid-cols-4 md:grid-cols-2">
+  <div *ngFor="let data of rentalData; let i = index">
+      <app-rental-item
+        [rentalDataItem]="data"
+        (seeDetail)="seeDetail(i)"
+      ></app-rental-item>
+  </div>
+</div>
+
+<app-rental-detail></app-rental-detail>

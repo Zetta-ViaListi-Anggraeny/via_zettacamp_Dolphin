@@ -1,0 +1,26 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    margin-top: 20px;
+}
+
+.form input{
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+.form button{
+    margin-top: 20px;
+    height: 40px;
+    /* background-color: #1F2933; */
+    /* color: white;
+    border: none;
+    width: 40%;
+    border-radius: 10px; */
+
+    /* font-size: 16px;
+    font-weight: 600; */
+}

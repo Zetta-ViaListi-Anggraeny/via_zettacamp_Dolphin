@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	color: #282624;
+}
+
+.primary-color {
+	background-color: #689d8b;
+}
+
+.primary-text {
+	color: #3a6859;
+}
+
+.small-text {
+	color: rgba(40, 38, 36, 0.7);
+}
+.m-screen {
+	margin: 0 100px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	border-bottom: 1px solid #dfe3e7;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav img {
+	padding-top: 5px;
+}
+
+nav li {
+	padding: 15px 20px;
+	text-decoration: none;
+	list-style-type: none;
+
+	font-weight: 500;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	margin: 40px 0;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 100px;
+
+	padding: 50px 0;
+}
+
+.hero h1 {
+	font-size: 40px;
+	font-weight: 600;
+	padding-bottom: 20px;
+}
+
+.hero p {
+	font-size: 20px;
+}
+
+.btn {
+	margin: 20px 0;
+	background-color: #689d8b;
+	padding: 15px 40px;
+
+	border-radius: 10px;
+	border: none;
+	color: white;
+	font-size: 16px;
+}
+
+.partner {
+	display: flex;
+	gap: 20px;
+	padding: 15px 0;
+}
+
+.choose-us {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card-choose {
+	text-align: center;
+	width: 150px;
+	padding: 30px 0;
+}
+
+.card-choose h4 {
+	font-weight: 600;
+	font-size: 35px;
+}
+
+.card-choose p {
+	color: #898989;
+}
+
+.title {
+	color: #3a6859;
+	font-weight: 700;
+	padding: 16px 0;
+	font-size: 28px;
+	margin-top: 40px;
+}
+
+.sub-title {
+	font-size: 18px;
+	color: rgba(40, 38, 36, 0.7);
+	padding-bottom: 20px;
+}
+
+.card {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #868686;
+	border-radius: 10px;
+	padding: 40px 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card h4 {
+	color: #3a6859;
+	font-size: 24px;
+}
+
+.card p {
+	font-size: 16px;
+	color: rgba(40, 38, 36, 0.7);
+	padding-bottom: 20px;
+	font-weight: 600;
+}
+
+.card li {
+	font-size: 18px;
+	padding: 4px 0;
+	text-align: left;
+}
+.card button {
+	background-color: #689d8b;
+	padding: 20px 180px;
+
+	border-radius: 10px;
+	border: none;
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+
+	margin-top: 40px;
+}
+
+/* About */
+.about {
+	margin: 100px 200px;
+}
+
+.about h1 {
+	font-size: 40px;
+	padding-bottom: 40px;
+}
+
+.about p {
+	margin-bottom: 20px;
+}
+
+.about-hero {
+	text-align: center;
+	padding: 50px;
+}
+
+.about-content {
+	text-align: justify;
+}
+.social table {
+	border-collapse: collapse;
+	margin: 50px 0;
+}
+
+.social th,
+.social td {
+	border-bottom: 1px solid #eceff1;
+}
+
+.about title {
+	font-size: 24px;
+	padding: 20px 0;
+}
+.about-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Profile */
+
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.profile img {
+	border-radius: 50%;
+	width: 150px;
+}
+.personal-info {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.personal-info h4 {
+	color: #434343;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 10px 0;
+}
+
+.personal-info p {
+	font-size: 16px;
+}
+
+.personaldata h4 {
+	font-size: 24px;
+}
+
+/* Song Listing */
+.song{
+	padding-bottom: 40px;
+}
+.song table {
+	width: 100%;
+	margin-top: 20px;
+}
+.song th,
+.song td {
+	padding: 20px;
+}
+
+.song thead{
+	background-color: #689d8b;
+}
+
+.song th{
+	color: white;
+}
+
+.song td{
+	border-bottom: 1px solid #689d8b;
+}
+
+.song img{
+	border-radius: 20px;
+}
+
+/* Album Preview */
+
+.album h1{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.album ul{
+	list-style-type: disc;
+}
+
+/* Footer */
+.line{
+	margin-top: 80px;
+	border-top: #689d8b 2px solid;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+footer section{
+	padding: 80px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer button{
+	padding: 18px;
+	width: 150px;
+	margin: 0px 20px;
+
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+.foot-content{
+	padding: 20px 100px;
+	background-color: #689d8b;
+
+	display: flex;
+	justify-content: space-between;
+	font-weight: 600;
+}
+
+.foot-content span{
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.foot-content span p{
+	padding: 0 20px;
+	color: #eceff1;
+}
+
+.foot-text h4{
+	font-size: 32px;
+	width: 600px;
+	padding: 6px 0;
+}
+
+.foot-text p{
+	font-size: 16px;
+	padding: 15px 0;
+}
+
+.center{
+	text-align: center;
+}

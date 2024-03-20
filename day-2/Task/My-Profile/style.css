@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: #1a1a1a;
+}
+
+.small-text {
+	color: #7f7f7f;
+}
+
+.primary-color {
+	color: #e37218;
+}
+
+header {
+	text-align: center;
+	padding: 50px 0px;
+}
+
+header h2 {
+	padding-top: 18px;
+	font-weight: 600;
+}
+
+header h1 {
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 58px;
+	color: #e37218;
+}
+
+.profile {
+	border-radius: 50%;
+	box-shadow: 0px 0px 30px 0px #ffc99e;
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0px 20px;
+	/* margin : 0px 20px; */
+	padding: 20px 0px;
+}
+
+.social-media img {
+	width: 30px;
+	height: auto;
+}
+
+main {
+	margin: auto;
+	width: 50%;
+	text-align: justify;
+}
+
+.project {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 80px 0px;
+}
+
+.project a {
+	text-decoration: none;
+	text-align: center;
+}
+
+.project p {
+	/* border: 1px solid; */
+	border: none;
+	border-radius: 60%;
+	width: 150px;
+	height: 150px;
+	margin: 0px 10px;
+
+	font-size: 20px;
+	font-weight: 500;
+	padding: 60px 0px;
+	transition: transform 1s;
+}
+
+.btn-resume {
+	background-color: #99c2ff;
+	color: #3b85f5;
+}
+
+.btn-project {
+	background-color: #f4c39d;
+	color: #ff8d37;
+}
+
+.btn-contact {
+	background-color: #f5adc3;
+	color: #ed4275;
+}
+
+.btn-contact:hover,
+.btn-project:hover,
+.btn-resume:hover {
+	background-color: white;
+	border: 2px solid;
+	transform: translate(0, -20%);
+}
+
+section {
+	margin: 30px 0px;
+}
+
+section h2 {
+	text-align: center;
+	margin-bottom: 10px;
+
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th,
+td {
+	padding: 2px 20px;
+}
+
+th {
+	font-weight: 600;
+}
+
+ul {
+	list-style: none;
+}
+
+li::before {
+	content: '\2022';
+	color: #e37218;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 8px;
+	padding-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+audio {
+	border-radius: 30px;
+}
